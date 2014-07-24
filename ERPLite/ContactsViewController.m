@@ -9,11 +9,13 @@
 #import "ContactsViewController.h"
 #import "Constants.h"
 #import "Contacts.h"
+#import "ImageTextCell.h"
 #import <ASIFormDataRequest.h>
 #import <SVProgressHUD.h>
 #import <JSONKit.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <UIActivityIndicator-for-SDWebImage/UIImageView+UIActivityIndicatorForSDWebImage.h>
+#import <AFNetworking/AFNetworking.h>
 
 @implementation ContactsViewController
 
@@ -37,7 +39,15 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell"];
+    static NSString *CellIdentifier = @"ContactCell";
+    ImageTextCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+//    if (cell == nil) {
+//        cell = [[ImageTextCell alloc]
+//                initWithStyle:UITableViewCellStyleSubtitle
+//                reuseIdentifier:CellIdentifier];
+//    }
+    
     Contacts *contact = [self.contacts objectAtIndex:indexPath.row];
     cell.textLabel.text = contact.name;
     cell.detailTextLabel.text = contact.modifiedDate;
@@ -46,9 +56,11 @@
 //    NSData *data = [NSData dataWithContentsOfURL:avatorURL];
 //    UIImage *avatorimage = [[UIImage alloc] initWithData:data];
 //    [cell.imageView setImage:avatorimage];
-    [cell.imageView setImageWithURL:[NSURL URLWithString:contact.avatorURL]
-                    placeholderImage:[UIImage imageNamed:@"placeholder.png"]
-                    usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    cell.imageView.contentMode = UIViewContentModeCenter;
+    NSLog(@"%@: %@",contact.name,contact.thumbnailURL);
+    [cell.imageView setImageWithURL:[NSURL URLWithString:contact.thumbnailURL]
+                   placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+//                    usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     
     return cell;
 }
@@ -63,11 +75,12 @@
     NSString *access_token = [userDefaultes stringForKey:@"access_token"];
     NSString *accessToken = [NSString stringWithFormat:@"Bearer %@", access_token];
     
-    NSURL *url_login = [NSURL URLWithString:kContactListURL];
-    ASIHTTPRequest *requestLogin = [ASIHTTPRequest requestWithURL:url_login];
-    [requestLogin addRequestHeader:@"Authorization" value:accessToken];
-    [requestLogin startSynchronous];
-    NSData *responseData = [requestLogin responseData ];
+    NSURL *url_contacts = [NSURL URLWithString:kContactListURL];
+    ASIHTTPRequest *requestContacts = [ASIHTTPRequest requestWithURL:url_contacts];
+    [requestContacts addRequestHeader:@"Authorization" value:accessToken];
+    [requestContacts startSynchronous];
+    NSData *responseData = [requestContacts responseData ];
+    
     JSONDecoder *jd = [[JSONDecoder alloc] init];
     NSDictionary *result = [jd objectWithData:responseData];
     if ([result objectForKey:@"status_code"] != nil) {
@@ -77,6 +90,26 @@
             Contacts *contact = [[Contacts alloc]init];
             contact.name = json[@"name"];
             contact.avatorURL = json[@"avator"];
+            
+            NSURL *url_thumbnail = [NSURL URLWithString:[kGetSignedUrl stringByAppendingString:json[@"thumbnail"]]];
+            ASIHTTPRequest *requestThumbnail = [ASIHTTPRequest requestWithURL:url_thumbnail];
+            [requestThumbnail addRequestHeader:@"Authorization" value:accessToken];
+            [requestThumbnail startSynchronous];
+            NSData *thumbnailData = [requestThumbnail responseData];
+            
+//            AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+//            [manager.requestSerializer setValue:accessToken forHTTPHeaderField:@"Authorization"];
+//            [manager GET:[kGetSignedUrl stringByAppendingString:json[@"thumbnail"]]
+//                     parameters:nil
+//                     success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//                         NSLog(@"JSON: %@", responseObject);
+//                     }
+//                     failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//                         NSLog(@"Error: %@", error);
+//            }];
+            
+            contact.thumbnailURL = [[NSString alloc] initWithData:thumbnailData encoding:NSASCIIStringEncoding];
+//            NSLog(@"%@: %@",contact.name,contact.thumbnailURL);
             contact.detailURL = json[@"url"];
             contact.modifiedDate = json[@"modifiedDate"];
             [contacts addObject:contact];

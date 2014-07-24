@@ -1,5 +1,5 @@
 //
-//  ContactsDetailViewController.h
+//  ContactsCreateViewController.h
 //  ERPLite
 //
 //  Created by RInz on 14-6-17.
@@ -8,7 +8,7 @@
 
 #import "FXForms.h"
 
-@interface ContactsDetailViewController : UIViewController <FXFormControllerDelegate>
+@interface ContactsCreateViewController : UIViewController <FXFormControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) FXFormController *formController;

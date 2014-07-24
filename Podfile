@@ -9,5 +9,6 @@ pod 'JSONKit-NoWarning', '~> 1.2'
 pod 'FXForms', '~> 1.1.6'
 pod 'SDWebImage', '~>3.6'
 pod 'UIActivityIndicator-for-SDWebImage', '~> 1.0.5'
+pod 'AFNetworking', '~> 2.3.1'
 
 

@@ -13,6 +13,7 @@
 @synthesize name;
 @synthesize modifiedDate;
 @synthesize avatorURL;
+@synthesize thumbnailURL;
 @synthesize detailURL;
 
 @end

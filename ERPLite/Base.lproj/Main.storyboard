@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -88,7 +89,7 @@
             </objects>
             <point key="canvasLocation" x="-953" y="-342"/>
         </scene>
-        <!--Register View Controller - Register-->
+        <!--Register-->
         <scene sceneID="MVj-WV-60T">
             <objects>
                 <viewController id="xF8-zI-jfc" customClass="RegisterViewController" sceneMemberID="viewController">
@@ -181,9 +182,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fO7-l3-fs6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-22" y="362"/>
+            <point key="canvasLocation" x="6" y="375"/>
         </scene>
-        <!--Main View Controller - Menu-->
+        <!--Menu-->
         <scene sceneID="6Df-ec-cSl">
             <objects>
                 <viewController id="DRu-DI-Ai6" customClass="MainViewController" customModule="ERPLite" customModuleProvider="target" sceneMemberID="viewController">
@@ -253,7 +254,7 @@
             </objects>
             <point key="canvasLocation" x="958" y="-342"/>
         </scene>
-        <!--Contacts View Controller - Contacts-->
+        <!--Contacts-->
         <scene sceneID="eBS-8L-IyZ">
             <objects>
                 <viewController id="KfV-kB-HQS" customClass="ContactsViewController" sceneMemberID="viewController">
@@ -265,22 +266,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="LGg-s5-i2O">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="LGg-s5-i2O">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContactCell" textLabel="IVd-I1-kI9" detailTextLabel="Sri-g2-xGq" rowHeight="70" style="IBUITableViewCellStyleSubtitle" id="UGL-4r-MNH">
+                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContactCell" textLabel="b2R-ld-5pg" detailTextLabel="In2-ew-M4f" style="IBUITableViewCellStyleSubtitle" id="tv3-D6-hxE">
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UGL-4r-MNH" id="s3Q-Tl-wBI">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tv3-D6-hxE" id="Wqr-9U-MjK">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IVd-I1-kI9">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b2R-ld-5pg">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Sri-g2-xGq">
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="In2-ew-M4f">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -318,7 +319,7 @@
             </objects>
             <point key="canvasLocation" x="1947" y="-629"/>
         </scene>
-        <!--View Controller - Contact Detail-->
+        <!--Contact Detail-->
         <scene sceneID="aUR-at-GRN">
             <objects>
                 <viewController id="rck-5R-vWl" sceneMemberID="viewController">
@@ -337,7 +338,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YbQ-9x-70P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2819" y="-629"/>
+            <point key="canvasLocation" x="2819" y="-625"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="UUH-PA-vaA">
@@ -358,7 +359,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5bf-ob-G6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1940" y="5"/>
+            <point key="canvasLocation" x="1947" y="33"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0tM-Ec-EVZ">
@@ -376,7 +377,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Q1-3N-hoY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-554" y="362"/>
+            <point key="canvasLocation" x="-526" y="375"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AWv-1F-vi6">
@@ -430,12 +431,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPd-bw-n5c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1415" y="5"/>
+            <point key="canvasLocation" x="1415" y="33"/>
         </scene>
-        <!--Contacts Detail View Controller - Create Contact-->
+        <!--Create Contact-->
         <scene sceneID="Ka9-HZ-Ko5">
             <objects>
-                <viewController id="eoU-K6-8Cg" customClass="ContactsDetailViewController" sceneMemberID="viewController">
+                <viewController id="eoU-K6-8Cg" customClass="ContactsCreateViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QSN-Jn-vkn"/>
                         <viewControllerLayoutGuide type="bottom" id="CGz-IH-rqa"/>
@@ -518,7 +519,10 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination" type="retina4">
+            <size key="portraitSize" width="320" height="568"/>
+            <size key="landscapeSize" width="568" height="320"/>
+        </simulatedScreenMetrics>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="cf6-CX-aU6"/>

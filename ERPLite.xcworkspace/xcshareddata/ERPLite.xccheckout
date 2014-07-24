@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D48D4742-AFE7-4758-BFF7-A279C080D362</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ERPLite</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DE53480E-C3D0-45FB-BE53-E6C3A93EB8A8</key>
+		<string>https://github.com/lacusrinz/ERPLite_IOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ERPLite.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DE53480E-C3D0-45FB-BE53-E6C3A93EB8A8</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/lacusrinz/ERPLite_IOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DE53480E-C3D0-45FB-BE53-E6C3A93EB8A8</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DE53480E-C3D0-45FB-BE53-E6C3A93EB8A8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ERPLite</string>
+		</dict>
+	</array>
+</dict>
+</plist>

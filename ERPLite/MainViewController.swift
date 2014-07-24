@@ -54,7 +54,7 @@ class MainViewController: UIViewController, ContactsViewControllerDelegate {
     }
     
     func ContactsViewControllerDidBack(controller: ContactsViewController){
-        dismissModalViewControllerAnimated(true)
+        dismissViewControllerAnimated(false, completion:nil)
     }
 
 }

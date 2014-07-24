@@ -6,10 +6,10 @@
 //  Copyright (c) 2014年 RInz. All rights reserved.
 //
 
-#import "ContactsDetailViewController.h"
+#import "ContactsCreateViewController.h"
 #import "ContactsForm.h"
 
-@implementation ContactsDetailViewController
+@implementation ContactsCreateViewController
 
 - (void)viewDidLoad
 {

@@ -13,6 +13,7 @@ extern NSString * const kClientSecrect;
 extern NSString * const kAccessURL;
 extern NSString * const kRootURL;
 extern NSString * const kContactListURL;
+extern NSString * const kGetSignedUrl;
 
 @interface Constants : NSObject {
     
