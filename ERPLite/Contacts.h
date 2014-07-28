@@ -12,7 +12,7 @@
 
 @property (copy, nonatomic) NSString *name;
 @property (copy, nonatomic) NSString *modifiedDate;
-@property (copy, nonatomic) NSString *avatorURL;
+@property (copy, nonatomic) NSString *avatarURL;
 @property (copy, nonatomic) NSString *thumbnailURL;
 @property (copy, nonatomic) NSString *detailURL;
 

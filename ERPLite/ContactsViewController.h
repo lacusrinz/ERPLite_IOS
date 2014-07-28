@@ -23,7 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *Back;
 @property (weak, nonatomic) IBOutlet UITableView *contactsTableView;
 
-@property (strong, nonatomic) NSMutableArray *contacts;
+@property (strong, nonatomic) NSArray *contacts;
 @property (strong, nonatomic) NSMutableData *data;
 
 - (IBAction)Back:(id)sender;

@@ -12,7 +12,7 @@
 
 @synthesize name;
 @synthesize modifiedDate;
-@synthesize avatorURL;
+@synthesize avatarURL;
 @synthesize thumbnailURL;
 @synthesize detailURL;
 
