@@ -64,7 +64,7 @@ class MainViewController: UIViewController, ContactsViewControllerDelegate {
                     requestThumbnail.addRequestHeader("Authorization", value: accessToken)
                     requestThumbnail.startSynchronous()
                     var responseThumbnail = requestThumbnail.responseString()
-                    println(responseThumbnail)
+
                     var contact = Contacts()
                     contact.name = response["results"][index]["name"].string
                     contact.avatarURL = response["results"][index]["avatarURL"].string

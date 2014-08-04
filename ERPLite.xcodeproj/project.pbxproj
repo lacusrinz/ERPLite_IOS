@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A8004DDD194C93C3003EFCD9 /* Contacts.m in Sources */ = {isa = PBXBuildFile; fileRef = A8004DDC194C93C3003EFCD9 /* Contacts.m */; };
 		A812FA501980C12A00C24DC3 /* ImageTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A812FA4F1980C12A00C24DC3 /* ImageTextCell.m */; };
+		A815286F19873360004D92E5 /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A815286E19873360004D92E5 /* VPImageCropperViewController.m */; };
 		A81886E1194B2DD600CF8059 /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81886E0194B2DD600CF8059 /* ContactsViewController.m */; };
 		A84007751942F60B00F22BE0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84007741942F60B00F22BE0 /* MainViewController.swift */; };
 		A8400782194443A300F22BE0 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = A8400781194443A300F22BE0 /* Constants.m */; };
@@ -27,6 +28,7 @@
 		A8CE32FC193ADD65001D83A7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8CE32FA193ADD65001D83A7 /* InfoPlist.strings */; };
 		A8CE32FE193ADD65001D83A7 /* ERPLiteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8CE32FD193ADD65001D83A7 /* ERPLiteTests.m */; };
 		A8D140EFBE0145909CE5471B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CC0BAA9D33F45B683FA1C33 /* libPods.a */; };
+		A8DEFEE81987DD510069B1BA /* VPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8DEFEE71987DD510069B1BA /* VPViewController.m */; };
 		A8E22FC0195061A500C52E65 /* ContactsCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E22FBF195061A500C52E65 /* ContactsCreateViewController.m */; };
 		A8E22FC319506C1200C52E65 /* ContactsForm.m in Sources */ = {isa = PBXBuildFile; fileRef = A8E22FC219506C1200C52E65 /* ContactsForm.m */; };
 		A8F675F2193B39590084447D /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F675F1193B39590084447D /* loginViewController.m */; };
@@ -51,6 +53,8 @@
 		A8004DDC194C93C3003EFCD9 /* Contacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Contacts.m; path = ERPLite/Contacts.m; sourceTree = "<group>"; };
 		A812FA4E1980C12A00C24DC3 /* ImageTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTextCell.h; sourceTree = "<group>"; };
 		A812FA4F1980C12A00C24DC3 /* ImageTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTextCell.m; sourceTree = "<group>"; };
+		A815286D19873360004D92E5 /* VPImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VPImageCropperViewController.h; path = ERPLite/VPImageCropperViewController.h; sourceTree = "<group>"; };
+		A815286E19873360004D92E5 /* VPImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VPImageCropperViewController.m; path = ERPLite/VPImageCropperViewController.m; sourceTree = "<group>"; };
 		A81886DF194B2DD600CF8059 /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactsViewController.h; path = ERPLite/ContactsViewController.h; sourceTree = "<group>"; };
 		A81886E0194B2DD600CF8059 /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactsViewController.m; path = ERPLite/ContactsViewController.m; sourceTree = "<group>"; };
 		A84007741942F60B00F22BE0 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = ERPLite/MainViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 		A8CE32F9193ADD65001D83A7 /* ERPLiteTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ERPLiteTests-Info.plist"; sourceTree = "<group>"; };
 		A8CE32FB193ADD65001D83A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A8CE32FD193ADD65001D83A7 /* ERPLiteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ERPLiteTests.m; sourceTree = "<group>"; };
+		A8DEFEE61987DD510069B1BA /* VPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VPViewController.h; path = ERPLite/VPViewController.h; sourceTree = "<group>"; };
+		A8DEFEE71987DD510069B1BA /* VPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VPViewController.m; path = ERPLite/VPViewController.m; sourceTree = "<group>"; };
 		A8E22FBE195061A400C52E65 /* ContactsCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactsCreateViewController.h; path = ERPLite/ContactsCreateViewController.h; sourceTree = "<group>"; };
 		A8E22FBF195061A500C52E65 /* ContactsCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactsCreateViewController.m; path = ERPLite/ContactsCreateViewController.m; sourceTree = "<group>"; };
 		A8E22FC119506C1200C52E65 /* ContactsForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactsForm.h; path = ERPLite/ContactsForm.h; sourceTree = "<group>"; };
@@ -143,6 +149,8 @@
 		A81AB41F1951CA0500828560 /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				A8DEFEE61987DD510069B1BA /* VPViewController.h */,
+				A8DEFEE71987DD510069B1BA /* VPViewController.m */,
 				A8E22FBE195061A400C52E65 /* ContactsCreateViewController.h */,
 				A8E22FBF195061A500C52E65 /* ContactsCreateViewController.m */,
 				A8F675F0193B39590084447D /* LoginViewController.h */,
@@ -159,6 +167,8 @@
 		A89FA5461984D4E50050B131 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				A815286D19873360004D92E5 /* VPImageCropperViewController.h */,
+				A815286E19873360004D92E5 /* VPImageCropperViewController.m */,
 				A8004DD8194BF0E6003EFCD9 /* ERPLite-Bridging-Header.h */,
 				A89FA5471984D5270050B131 /* SwiftyJSON.swift */,
 			);
@@ -390,11 +400,13 @@
 				A8CE32E3193ADD65001D83A7 /* AppDelegate.m in Sources */,
 				A8F675F2193B39590084447D /* loginViewController.m in Sources */,
 				A89FA5481984D5270050B131 /* SwiftyJSON.swift in Sources */,
+				A8DEFEE81987DD510069B1BA /* VPViewController.m in Sources */,
 				A8CE32DF193ADD65001D83A7 /* main.m in Sources */,
 				A81886E1194B2DD600CF8059 /* ContactsViewController.m in Sources */,
 				A8E22FC319506C1200C52E65 /* ContactsForm.m in Sources */,
 				A8004DDD194C93C3003EFCD9 /* Contacts.m in Sources */,
 				A8E22FC0195061A500C52E65 /* ContactsCreateViewController.m in Sources */,
+				A815286F19873360004D92E5 /* VPImageCropperViewController.m in Sources */,
 				A8F675F5193B530C0084447D /* RegisterViewController.m in Sources */,
 				A84007751942F60B00F22BE0 /* MainViewController.swift in Sources */,
 				A8400782194443A300F22BE0 /* Constants.m in Sources */,

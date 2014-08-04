@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment defaultVersion="1808" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -247,7 +247,7 @@
                     <navigationItem key="navigationItem" title="Menu" id="rlL-4B-qsH"/>
                     <connections>
                         <segue destination="frV-uQ-zWI" kind="modal" identifier="goToContacts" id="565-L9-gHQ"/>
-                        <segue destination="f4r-T2-E0G" kind="modal" identifier="GoToEvents" id="dIK-I1-gCw"/>
+                        <segue destination="f4r-T2-E0G" kind="modal" identifier="goToEvents" id="dIK-I1-gCw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WUr-1o-BEz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -270,7 +270,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContactCell" textLabel="b2R-ld-5pg" detailTextLabel="In2-ew-M4f" style="IBUITableViewCellStyleSubtitle" id="tv3-D6-hxE">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ContactCell" textLabel="b2R-ld-5pg" detailTextLabel="In2-ew-M4f" style="IBUITableViewCellStyleSubtitle" id="tv3-D6-hxE">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tv3-D6-hxE" id="Wqr-9U-MjK">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -305,7 +305,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Add" id="QIb-tp-WzH">
                             <connections>
                                 <action selector="AddContact:" destination="KfV-kB-HQS" id="imT-Ok-H2k"/>
-                                <segue destination="HDx-14-7aP" kind="modal" id="2pd-31-Dam"/>
+                                <segue destination="63i-tV-MM2" kind="modal" identifier="goToCreateContact" id="28d-g7-3Dh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -461,6 +461,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Done" id="5Ta-YV-BQW">
                             <connections>
                                 <action selector="BtnDone:" destination="eoU-K6-8Cg" id="3a2-PA-3UX"/>
+                                <segue destination="KfV-kB-HQS" kind="modal" id="WbR-wD-Dgt"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -470,7 +471,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MGH-MN-8vO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2819" y="-1267"/>
+            <point key="canvasLocation" x="1947" y="-1979"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1iS-a3-9Nd">
@@ -490,6 +491,25 @@
             </objects>
             <point key="canvasLocation" x="2375" y="-629"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="uHX-Ph-AMz">
+            <objects>
+                <viewController id="63i-tV-MM2" customClass="VPViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Skr-fy-p00"/>
+                        <viewControllerLayoutGuide type="bottom" id="IV8-5L-wuo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="46G-q7-88D">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Rqk-xK-nCi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pWZ-aF-pYj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2375" y="-1291"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="sGX-2y-TAE">
             <objects>
@@ -506,7 +526,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M2T-dz-58f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2375" y="-1267"/>
+            <point key="canvasLocation" x="2851" y="-1283"/>
         </scene>
     </scenes>
     <resources>
@@ -526,5 +546,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="cf6-CX-aU6"/>
+        <segue reference="WbR-wD-Dgt"/>
     </inferredMetricsTieBreakers>
 </document>

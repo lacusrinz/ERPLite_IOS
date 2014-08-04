@@ -47,7 +47,7 @@ BOOL _isBack = NO;
         JSONDecoder *jd = [[JSONDecoder alloc] init];
         NSDictionary *result = [jd objectWithData:responseData];
         if ([result objectForKey:@"status_code"] != nil) {
-            [SVProgressHUD showErrorWithStatus:[result objectForKey:@"detail"]];
+            [SVProgressHUD dismiss];
         }
         else{
             [SVProgressHUD showSuccessWithStatus:@"Success"];
