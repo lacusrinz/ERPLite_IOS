@@ -11,7 +11,6 @@
 #import <SVProgressHUD.h>
 #import <JSONKit.h>
 #import "Constants.h"
-#import "ERPLite-Swift.h"
 
 @interface RegisterViewController ()
 {

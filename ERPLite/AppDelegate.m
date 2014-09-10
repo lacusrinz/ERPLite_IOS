@@ -7,12 +7,19 @@
 //
 
 #import "AppDelegate.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [[SDWebImageManager sharedManager] setCacheKeyFilter:^(NSURL *url)
+    {
+        url = [[NSURL alloc] initWithScheme:url.scheme host:url.host path:url.path];
+        return [url absoluteString];
+    }];
+    
     return YES;
 }
 							

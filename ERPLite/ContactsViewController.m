@@ -9,7 +9,9 @@
 #import "ContactsViewController.h"
 #import "Constants.h"
 #import "Contacts.h"
-#import "ImageTextCell.h"
+#import "ContactCell.h"
+#import "QuartzCore/QuartzCore.h"
+
 #import <ASIFormDataRequest.h>
 #import <SVProgressHUD.h>
 #import <JSONKit.h>
@@ -17,8 +19,8 @@
 #import <UIActivityIndicator-for-SDWebImage/UIImageView+UIActivityIndicatorForSDWebImage.h>
 #import <AFNetworking/AFNetworking.h>
 
-@implementation ContactsViewController
 
+@implementation ContactsViewController
 
 - (void)viewDidLoad{
     self.contactsTableView.delegate = self;
@@ -39,7 +41,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier = @"ContactCell";
-    ImageTextCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    ContactCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
 //    if (cell == nil) {
 //        cell = [[ImageTextCell alloc]
@@ -48,10 +50,13 @@
 //    }
     
     Contacts *contact = [self.contacts objectAtIndex:indexPath.row];
-    cell.textLabel.text = contact.name;
-    cell.detailTextLabel.text = contact.modifiedDate;
-    cell.imageView.contentMode = UIViewContentModeCenter;
-    [cell.imageView setImageWithURL:[NSURL URLWithString:contact.thumbnailURL]
+    cell.nameLabel.text = contact.name;
+    cell.dateLabel.text = contact.modifiedDate;
+    
+    cell.avatarThumbnail.layer.cornerRadius = cell.avatarThumbnail.frame.size.height/2;
+    cell.avatarThumbnail.layer.masksToBounds = YES;
+    cell.avatarThumbnail.contentMode = UIViewContentModeScaleAspectFit;//UIViewContentModeScaleAspectFill
+    [cell.avatarThumbnail setImageWithURL:[NSURL URLWithString:contact.avatarURL]
                    placeholderImage:[UIImage imageNamed:@"placeholder.png"]
                     usingActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     
@@ -62,6 +67,8 @@
     [self performSegueWithIdentifier:@"goToContactDetail" sender:self];
 }
 
-- (IBAction)AddContact:(id)sender {
+- (void)MapViewControllerDidBack:(MapViewController *)controller{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 @end

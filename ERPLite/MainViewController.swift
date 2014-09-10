@@ -44,7 +44,7 @@ class MainViewController: UIViewController, ContactsViewControllerDelegate {
     func GetContacts(){
         let userDefaultes = NSUserDefaults.standardUserDefaults()
         var access_token = userDefaultes.stringForKey("access_token")
-        var accessToken = NSString(string: "Bearer " + access_token)
+        var accessToken = NSString(string: "Bearer " + access_token!)
 
         var url_contacts = kContactListURL
         
@@ -59,16 +59,16 @@ class MainViewController: UIViewController, ContactsViewControllerDelegate {
                 var count = response["count"].integer
                 
                 for var index = 0; index<count; ++index{
-                    var url_contacts = NSURL(string: kGetSignedUrl.stringByAppendingString(response["results"][index]["thumbnail"].string))
-                    var requestThumbnail = ASIHTTPRequest(URL: url_contacts);
-                    requestThumbnail.addRequestHeader("Authorization", value: accessToken)
-                    requestThumbnail.startSynchronous()
-                    var responseThumbnail = requestThumbnail.responseString()
+                    var url_contacts = NSURL(string: kGetSignedUrl.stringByAppendingString(response["results"][index]["avatar"].string!))
+                    var requestAvatar = ASIHTTPRequest(URL: url_contacts);
+                    requestAvatar.addRequestHeader("Authorization", value: accessToken)
+                    requestAvatar.startSynchronous()
+                    var responseAvatar = requestAvatar.responseString()
 
                     var contact = Contacts()
                     contact.name = response["results"][index]["name"].string
-                    contact.avatarURL = response["results"][index]["avatarURL"].string
-                    contact.thumbnailURL = responseThumbnail
+                    contact.avatarURL = responseAvatar
+                    contact.thumbnailURL = response["results"][index]["thumbnailURL"].string
                     self.contacts.append(contact)
                 }
                 SVProgressHUD.dismiss()
@@ -84,17 +84,12 @@ class MainViewController: UIViewController, ContactsViewControllerDelegate {
 
 
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "goToContacts"){
             let navigationController = segue.destinationViewController as UINavigationController
             let contactsViewController = navigationController.viewControllers[0] as ContactsViewController
             contactsViewController.delegate = self
             contactsViewController.contacts = self.contacts
-        }
-        if (segue.identifier == "goToEvents"){
-//            let navigationController = segue.destinationViewController as UINavigationController
-//            let contactsViewController = navigationController.viewControllers[0] as ContactsViewController
-//            contactsViewController.delegate = self
         }
     }
     
