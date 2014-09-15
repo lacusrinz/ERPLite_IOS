@@ -18,7 +18,11 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <UIActivityIndicator-for-SDWebImage/UIImageView+UIActivityIndicatorForSDWebImage.h>
 #import <AFNetworking/AFNetworking.h>
+#import "ERPLite-Swift.h"
 
+@interface ContactsViewController()<MapViewControllerDelegate>
+
+@end
 
 @implementation ContactsViewController
 
@@ -65,6 +69,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self performSegueWithIdentifier:@"goToContactDetail" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    if ([segue.identifier isEqualToString:@"goToContactDetail"]) {
+        UINavigationController *navigationController = segue.destinationViewController;
+        MapViewController *mapViewController = [navigationController viewControllers][0];
+        mapViewController.delegate = self;
+    }
 }
 
 - (void)MapViewControllerDidBack:(MapViewController *)controller{

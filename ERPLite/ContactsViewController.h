@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ERPLite-Swift.h"
 
 @class ContactsViewController;
 
@@ -17,7 +16,7 @@
 
 @end
 
-@interface ContactsViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, MapViewControllerDelegate>
+@interface ContactsViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>//, MapViewControllerDelegate>
 
 @property (weak, nonatomic) id<ContactsViewControllerDelegate> delegate;
 
