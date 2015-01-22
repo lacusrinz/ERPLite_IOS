@@ -15,9 +15,18 @@ protocol MapViewControllerDelegate{
 
 class MapViewController: UIViewController{
     
+    @IBOutlet var pinchGesture: UIPinchGestureRecognizer!
     var delegate : MapViewControllerDelegate?
+    
+    override func viewDidLoad() {
+        pinchGesture.addTarget(self, action:"pinchView")
+        self.view.addGestureRecognizer(pinchGesture)
+    }
     
     @IBAction func Back(sender: AnyObject) {
         delegate?.MapViewControllerDidBack(self)
+    }
+    
+    func pinchView(pinchGestureRecognizer:UIPinchGestureRecognizer){
     }
 }
